@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button play = (Button) findViewById(R.id.btn_play);
+        Button manual = (Button) findViewById(R.id.btn_manual);
         Button quit = (Button) findViewById(R.id.btn_quit);
         Button scores = (Button) findViewById(R.id.btn_scores);
         final ImageView sound = (ImageView) findViewById(R.id.img_sound);
@@ -65,6 +66,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, GameActivity.class));
                 finish();
+            }
+        });
+
+        manual.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, ManualActivity.class));
             }
         });
 
